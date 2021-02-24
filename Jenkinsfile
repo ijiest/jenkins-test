@@ -4,9 +4,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh ```
+        sh '''
           echo 'Dummy Building ...'
-        ```
+        '''
       }
     }
     stage('Test') {

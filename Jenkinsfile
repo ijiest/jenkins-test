@@ -6,6 +6,7 @@ pipeline {
       steps {
         sh '''
           echo 'Dummy Building ...'
+          echo 'Dummy Building ...'
         '''
       }
     }

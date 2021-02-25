@@ -61,8 +61,8 @@ pipeline {
       }
     }
     stage('Build') {
-      node('e2e-pipeline') {
-        steps {
+      steps {
+        node('e2e-pipeline') {
           sh '''
             echo 'Dummy Building ...'
             ls -al /u/TADA/dbb-zappbuild

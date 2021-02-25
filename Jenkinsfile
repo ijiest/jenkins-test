@@ -6,8 +6,8 @@ pipeline {
       steps {
         sh '''
           echo 'Dummy Building ...'
-          echo 'Dummy Building ...'
         '''
+        print scm.getUserRemoteConfigs()[0].getUrl()
       }
     }
     stage('Test') {

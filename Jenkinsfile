@@ -47,7 +47,7 @@ pipeline {
                 configName: 'wazi-sandbox',
                 transfers: [
                   sshTransfer(
-                    sourceFiles: "dbb-zappbuild"
+                    sourceFiles: "dbb-zappbuild/**/*"
                   )
                 ],
                 usePromotionTimestamp: false,

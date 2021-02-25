@@ -61,10 +61,13 @@ pipeline {
       }
     }
     stage('Build') {
-      steps {
-        sh '''
-          echo 'Dummy Building ...'
-        '''
+      node() {
+        steps {
+          sh '''
+            echo 'Dummy Building ...'
+            ls -al /u/TADA/dbb-zappbuild
+          '''
+        }
       }
     }
     stage('Test') {

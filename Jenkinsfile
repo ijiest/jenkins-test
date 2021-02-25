@@ -44,7 +44,7 @@ pipeline {
           sshPublisher(
             publishers: [
               sshPublisherDesc(
-                configName: 'e2e-pipeline',
+                configName: 'wazi-sandbox',
                 transfers: [
                   sshTransfer(
                     sourceFiles: "dbb-zappbuild"

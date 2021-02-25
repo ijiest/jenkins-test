@@ -61,7 +61,7 @@ pipeline {
       }
     }
     stage('Build') {
-      node() {
+      node('e2e-pipeline') {
         steps {
           sh '''
             echo 'Dummy Building ...'

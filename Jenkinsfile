@@ -7,10 +7,16 @@ pipeline {
         sh '''
           echo 'Dummy Building ...'
         '''
-        print scm.getUserRemoteConfigs()[0].getUrl()
-        print scm.branches[0].name
         dir('hoge') {
-          sh 'pwd'
+          srcGitRepo = scm.getUserRemoteConfigs()[0].getUrl()
+          srcGitBranch =  scm.branches[0].name
+          scmVars = checkout(
+            [
+              $class: 'GitSCM',
+              branches: [[name: srcGitBranch]],
+              userRemoteConfigs: [[ url: srcGitRepo, ]]
+            ]
+          )
         }
       }
     }

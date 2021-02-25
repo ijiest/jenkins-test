@@ -8,6 +8,7 @@ pipeline {
           echo 'Dummy Building ...'
         '''
         print scm.getUserRemoteConfigs()[0].getUrl()
+        print scm.branches[0].name
       }
     }
     stage('Test') {

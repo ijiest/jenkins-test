@@ -66,32 +66,6 @@ pipeline {
             alwaysPublishFromMaster: true
           )
         }
-          sshPublisher(
-            publishers: [
-              sshPublisherDesc(
-                configName: 'e2e-pipeline',
-                transfers: [
-                  sshTransfer(
-                    sourceFiles: "dbb-zappbuild",
-                    removePrefix: "",
-                    remoteDirectory: '',
-                    cleanRemote: false,
-                    excludes: '',
-                    execCommand: "",
-                    execTimeout: 120000,
-                    flatten: false,
-                    makeEmptyDirs: false,
-                    noDefaultExcludes: false,
-                    patternSeparator: '[, ]+',
-                    remoteDirectorySDF: false,
-                  )
-                ],
-                usePromotionTimestamp: false,
-                useWorkspaceInPromotion: false, verbose: false
-              )
-            ],
-            alwaysPublishFromMaster: true
-          )
       }
     }
     stage('Build') {

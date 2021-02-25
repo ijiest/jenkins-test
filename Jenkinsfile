@@ -21,18 +21,20 @@ pipeline {
             ])
           }
 
-          /*dir('dbb-zappbuild') {
-           *  sh(script: 'rm -f .git/info/sparse-checkout', returnStdout: true)
-           *  srcGitRepo = scm.getUserRemoteConfigs()[0].getUrl()
-           *  srcGitBranch =  scm.branches[0].name
-           *  scmVars = checkout(
-           *    [
-           *      $class: 'GitSCM',
-           *      branches: [[name: srcGitBranch]],
-           *      userRemoteConfigs: [[ url: srcGitRepo, ]]
-           *    ]
-           *  )
-           */}
+          /*
+           * dir('dbb-zappbuild') {
+           *   sh(script: 'rm -f .git/info/sparse-checkout', returnStdout: true)
+           *   srcGitRepo = scm.getUserRemoteConfigs()[0].getUrl()
+           *   srcGitBranch =  scm.branches[0].name
+           *   scmVars = checkout(
+           *     [
+           *       $class: 'GitSCM',
+           *       branches: [[name: srcGitBranch]],
+           *       userRemoteConfigs: [[ url: srcGitRepo, ]]
+           *     ]
+           *   )
+           * }
+           */
         }
       }
     }

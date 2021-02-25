@@ -47,22 +47,12 @@ pipeline {
                 configName: 'e2e-pipeline',
                 transfers: [
                   sshTransfer(
-                    sourceFiles: "dbb-zappbuild",
-                    removePrefix: "",
-                    remoteDirectory: '',
-                    cleanRemote: false,
-                    excludes: '',
-                    execCommand: "",
-                    execTimeout: 120000,
-                    flatten: false,
-                    makeEmptyDirs: false,
-                    noDefaultExcludes: false,
-                    patternSeparator: '[, ]+',
-                    remoteDirectorySDF: false,
+                    sourceFiles: "dbb-zappbuild"
                   )
                 ],
                 usePromotionTimestamp: false,
-                useWorkspaceInPromotion: false, verbose: false
+                useWorkspaceInPromotion: false,
+                verbose: false
               )
             ],
             alwaysPublishFromMaster: true

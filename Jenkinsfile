@@ -9,6 +9,9 @@ pipeline {
         '''
         print scm.getUserRemoteConfigs()[0].getUrl()
         print scm.branches[0].name
+        dir('hoge') {
+          sh 'pwd'
+        }
       }
     }
     stage('Test') {
